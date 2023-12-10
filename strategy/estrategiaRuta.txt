@@ -1,0 +1,4 @@
+En este ejemplo, cada estrategia de enrutamiento se encapsula en una clase separada que implementa la interfaz EstrategiaRuta. 
+El Navegador tiene una referencia a la estrategia de enrutamiento actual y puede cambiar de estrategia en tiempo de ejecución. 
+Esto hace que sea fácil añadir nuevas estrategias de enrutamiento sin modificar la clase principal del navegador, mejorando la 
+flexibilidad y mantenibilidad del sistema.

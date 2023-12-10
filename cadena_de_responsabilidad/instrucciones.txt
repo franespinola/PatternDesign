@@ -1,0 +1,4 @@
+El usuario ingresa una cantidad de días.
+El programa pasa esa cantidad al primer manejador (Anios). De acuerdo a la cantidad de dias que le pasemos nos dira su equivalente en dias, meses y años
+Cada manejador en la cadena evalúa si puede manejar esa cantidad. Si puede, imprime cuántos años, meses y días faltan para el cumpleaños.
+Si no puede manejar completamente la cantidad, pasa el resto al siguiente manejador en la cadena.

@@ -1,0 +1,6 @@
+En este ejemplo, ManejadorBase es la clase abstracta que implementa el comportamiento por defecto del método manejar_solicitud y 
+almacena una referencia al siguiente manejador en la cadena. Luego, las clases concretas (ManejadorConcretoA, ManejadorConcretoB, 
+ManejadorConcretoC) extienden ManejadorBase e implementan sus propias lógicas de manejo de solicitudes.
+
+El cliente ensambla la cadena estableciendo las referencias entre los manejadores y puede activar cualquier manejador de la cadena. 
+La solicitud se pasa a lo largo de la cadena hasta que algún manejador se rehúsa a manejarla o hasta que llega al final de la cadena.

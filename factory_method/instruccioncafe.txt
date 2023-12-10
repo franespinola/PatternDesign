@@ -1,0 +1,5 @@
+En este código, Cafe es la interfaz del producto, y las clases CafeExpressStarbucks, CafeLargoStarbucks, CapsulaDolceGusto y CapsulaNespresso son implementaciones concretas de ese producto.
+
+FabricaCafe es la interfaz del creador (fábrica) que define el método abstracto preparar_cafe(). Luego, las clases FabricaStarbucks, FabricaDolceGusto y FabricaNespresso son creadores concretos que implementan este método para crear instancias específicas de café.
+
+Finalmente, el cliente puede interactuar con las fábricas sin conocer los detalles específicos de cómo se crean los cafés, proporcionando así flexibilidad y encapsulamiento.

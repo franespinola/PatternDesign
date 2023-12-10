@@ -1,0 +1,9 @@
+Aquí te dejo un ejemplo sencillo en Python para ilustrar cómo podrías implementar un Abstract Factory para gestionar la creación de componentes de interfaz de usuario para diferentes plataformas
+En este ejemplo:
+
+UIFactory es la interfaz abstracta para la creación de productos relacionados con la interfaz de usuario, como botones y cuadros de texto.
+Button y TextBox son interfaces abstractas para los productos específicos de la interfaz de usuario.
+WindowsUIFactory y MacOSUIFactory son implementaciones concretas de la interfaz UIFactory para las plataformas Windows y macOS, respectivamente.
+WindowsButton, WindowsTextBox, MacOSButton, y MacOSTextBox son implementaciones concretas de los productos específicos para cada plataforma.
+El cliente (create_ui) utiliza la fábrica abstracta para crear productos (botones y cuadros de texto) sin conocer los detalles específicos de la plataforma.
+Este ejemplo simula la creación de componentes de interfaz de usuario para dos plataformas diferentes mediante el uso del patrón de diseño Abstract Factory.

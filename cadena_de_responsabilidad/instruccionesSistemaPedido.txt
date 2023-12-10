@@ -1,0 +1,17 @@
+El patrón de diseño Chain of Responsibility es útil cuando se quiere pasar una solicitud a través de una cadena de manejadores, 
+donde cada manejador decide si procesa la solicitud o la pasa al siguiente en la cadena. Vamos a implementar un ejemplo de 
+Chain of Responsibility en el contexto de un sistema de pedidos online.
+Supongamos que tenemos diferentes etapas en el procesamiento de un pedido, como la validación del inventario, 
+el cálculo del precio final y la generación de la factura. Cada etapa tiene su propio manejador, y la solicitud (el pedido) 
+pasa a través de estos manejadores.
+
+En este ejemplo:
+
+Handler es la clase base para todos los manejadores. Define un método handle_request que los subtipos deben implementar.
+InventoryValidator, PriceCalculator y InvoiceGenerator son implementaciones concretas de los manejadores que realizan acciones específicas en el proceso del pedido.
+La clase Order representa un pedido con información como el ID, la cantidad y el nombre del producto. Tiene un método 
+calculate_total_price para calcular el precio total.
+El cliente utiliza la cadena de responsabilidad configurando los manejadores y luego iniciando el proceso llamando al handle_request del primer manejador (InventoryValidator).
+Este ejemplo simula el procesamiento de un pedido a través de una cadena de responsabilidad que valida el inventario, calcula el precio
+y genera la factura. Cada manejador decide si procesa la solicitud o pasa la responsabilidad al siguiente en la cadena.
+
