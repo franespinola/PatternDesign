@@ -1,0 +1,5 @@
+En este ejemplo, construiré un objeto Casa con diferentes tipos de constructores que representan casas hechas de 
+diferentes materiales.
+En este ejemplo, Builder es la interfaz constructora, ConstructorCasasMadera y ConstructorCasasPiedra son los constructores 
+concretos que implementan la interfaz Builder, Casa es el producto, y Director coordina la construcción de la casa. 
+El cliente puede crear diferentes tipos de casas utilizando los constructores y el director.
