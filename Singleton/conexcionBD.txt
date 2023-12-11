@@ -1,0 +1,20 @@
+ Imagina que quieres garantizar que solo haya una conexión activa a la base de datos en tu aplicación 
+ para evitar problemas de concurrencia y gestionar eficientemente los recursos de la base de datos.
+
+ En este ejemplo, la clase DatabaseConnection es un Singleton que representa una conexión a la base de datos. 
+ El método get_instance se encarga de gestionar la única instancia de la conexión a la base de datos. 
+ Al utilizar el Singleton en este contexto, puedes asegurarte de que todas las partes de tu aplicación 
+ accedan a la misma conexión a la base de datos, evitando así problemas de concurrencia y garantizando 
+ la coherencia en el acceso a los datos.
+ 
+ Explicacion
+ La instancia de la clase DatabaseConnection se crea en el método estático get_instance la primera vez que 
+ se llama y se almacena en el campo estático _instance. Aquí hay un desglose de lo que sucede:
+
+    Primera llamada a get_instance:
+        db_connection1 = DatabaseConnection.get_instance("url_de_prueba"): En este punto, _instance es None, por lo que se crea una nueva instancia de DatabaseConnection y se almacena en _instance. La instancia creada se devuelve y se asigna a db_connection1.
+
+    Subsiguientes llamadas a get_instance:
+        db_connection2 = DatabaseConnection.get_instance("otra_url_de_prueba"): Ahora _instance ya no es None, por lo que el método simplemente devuelve la instancia existente en lugar de crear una nueva. La instancia existente se asigna a db_connection2.
+
+En resumen, la creación de la instancia ocurre solo en la primera llamada al método get_instance, y las llamadas subsiguientes devolverán siempre la misma instancia creada anteriormente. Este es el comportamiento típico del patrón Singleton, donde se garantiza que solo haya una instancia de la clase y que esta instancia se reutilice en lugar de crear nuevas instancias cada vez.
